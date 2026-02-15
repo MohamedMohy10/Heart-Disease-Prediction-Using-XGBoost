@@ -1,0 +1,32 @@
+import joblib
+import os
+from sklearn.metrics import classification_report, confusion_matrix, accuracy_score
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+# 1. Load the Tuned Model and the Test Data
+model = joblib.load('../xgboost_89.joblib')
+p = '../data/processed'
+
+X_test = joblib.load(os.path.join(p, 'X_test.joblib'))
+y_test = joblib.load(os.path.join(p, 'y_test.joblib'))
+
+# 2. Final Predictions
+y_pred = model.predict(X_test)
+
+# 3. Final Metrics
+print("🏆 FINAL PROJECT PERFORMANCE (TEST SET) 🏆")
+print(f"Accuracy: {accuracy_score(y_test, y_pred):.4f}")
+print("\nDetailed Report:")
+print(classification_report(y_test, y_pred))
+
+# 4. Confusion Matrix Visualization
+cm = confusion_matrix(y_test, y_pred)
+plt.figure(figsize=(7, 5))
+sns.heatmap(cm, annot=True, fmt='d', cmap='Reds', xticklabels=['Absence', 'Presence'], yticklabels=['Absence', 'Presence'])
+plt.title('Final Confusion Matrix')
+plt.xlabel('Predicted Label')
+plt.ylabel('True Label')
+plt.savefig('final_results_matrix.png')
+
+print("\n📊 Saved confusion matrix to 'final_results_matrix.png'")

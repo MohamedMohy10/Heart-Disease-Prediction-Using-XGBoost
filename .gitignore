@@ -1,0 +1,7 @@
+# .gitignore
+env/
+scripts/submission.py
+src/
+
+__pycache__/
+*.joblib
