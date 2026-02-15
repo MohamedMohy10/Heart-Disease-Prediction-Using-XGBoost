@@ -31,16 +31,17 @@ This project leverages a large-scale dataset of 60,000 patient records to achiev
 | Precision      | **89%** |
 | Recall         | **89%** |
 | F1-score       | **89%** |
-| Accuracy       | **88.87** |
+| Accuracy       | **88.87%** |
 
 Confusion Matrix:
-         |      | precision  | recall | f1-score | 
-         |------|------------|--------|----------|
-         |**0** |    0.89    |  0.91  |    0.90  |   
-         |**1** |    0.88    |  0.87  |    0.87  |
-    
-   macro avg       0.89      0.89      0.89   
-weighted avg       0.89      0.89      0.89 
+
+|      | precision  | recall | f1-score | 
+|-------|------------|--------|--------|  
+| **0** |    0.89    |  0.91  |    0.90  |   
+| **1** |    0.88    |  0.87  |    0.87  |
+|       |            |        |          |
+| macro avg   |    0.89  |    0.89  |    0.89  | 
+| weighted avg    |   0.89   |   0.89  |    0.89 |
 
 
 **Highlights:**
