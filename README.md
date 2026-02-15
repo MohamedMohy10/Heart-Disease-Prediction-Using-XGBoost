@@ -12,8 +12,7 @@ This project leverages a large-scale dataset of 60,000 patient records to achiev
 
 - **Dataset:** Predicting Heart Disease 
 - **Source:** [Kaggle](https://www.kaggle.com/competitions/playground-series-s6e2/data)  
-- **Size:**  
-  - ~ +60,000 rows (generated data, see dataset description above)
+- **Size:**  ~ +60,000 rows (generated data, see dataset description above)
 ---
 
 ## 🛠️ Tech Stack
